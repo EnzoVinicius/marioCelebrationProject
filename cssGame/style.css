@@ -1,0 +1,157 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+* {
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;    
+}
+
+body{
+    background-color: rgb(236, 236, 236);
+}
+
+
+.game-board {
+    
+    width: 100%;
+    height: 600px;
+    border-top: 800px;
+    border-bottom:20px solid rgb(102, 167, 28);
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#87CEE8, #E0F6FF);
+}
+
+
+.mario {
+    width: 60px;
+    position: absolute;
+    bottom: 0;
+    margin-left: 100px;
+    z-index: 10;
+}
+
+.jump{
+    animation: jump-animation 600ms ease-out;
+}
+
+@keyframes jump-animation {
+    0%{
+        bottom: 0px;
+    }
+    45%{
+        bottom: 180px
+    }
+    55%{
+        bottom: 180px;
+    }
+    100%{
+        bottom:0px;
+    }
+    
+}
+
+
+
+.pipe {
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    right: -80px;
+}
+
+.pipe-animation{
+    animation: grass-animation 3s infinite linear;
+}
+
+@keyframes pipe-animation {
+    from{
+        right: -80px;
+    }
+    to{
+        right: 100%;
+    }
+    
+}
+
+.grass {
+    position: absolute;
+    bottom: 0;
+    width: 160px;
+    right: -160px;
+}
+
+.grass-animation{
+    animation: grass-animation 3s infinite linear;
+}
+
+@keyframes grass-animation {
+    from{
+        right: -80px;
+    }
+    to{
+        right: 100%;
+    }
+    
+}
+
+
+.clouds-big {
+    position: absolute;
+    width: 550px;
+    padding-top: 50px;
+    
+    animation: clouds-animation-big 20s infinite linear;
+}
+.clouds-mid {
+    position: absolute;
+    width: 270px;
+    padding-top: 150px;
+
+    animation: clouds-animation-mid 30s infinite linear;
+}
+.clouds-minnor {
+    position: absolute;
+    width: 150px;
+    padding-top: 300px;
+   
+    animation: clouds-animation-minnor 25s infinite linear;
+}
+
+
+@keyframes clouds-animation-big {
+    from{
+        right: -550px;
+    }
+    to{
+        right: 100%;
+    }
+}
+
+@keyframes clouds-animation-mid {
+    from{
+        right: -1300px;
+    }
+    to{
+        right: 100%;
+    }
+}
+
+@keyframes clouds-animation-minnor {
+    from{
+        right: -250px;
+    }
+    to{
+        right: 100%;
+    }
+}
+
+
+p {
+    font-family:'Righteous', monospace;
+    padding: 50px;
+    font-size: x-large;
+    text-align: center;
+    color: rgb(245, 9, 9);
+}
